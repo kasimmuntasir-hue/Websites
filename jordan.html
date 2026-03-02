@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Michael Jordan: From Child to GOAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ce1141, #000000); /* Bulls red to black */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #f5f5f5;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px #000;
+        }
+
+        /* Hero circular image */
+        .hero-img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* circular */
+            object-fit: cover;
+            border: 4px solid #fff;
+            margin: 20px auto;
+            display: block;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ce1141;
+        }
+
+        .timeline {
+            width: 90%;
+            max-width: 1000px;
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: #fff;
+            transform: translateX(-50%);
+        }
+
+        .event {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
+            margin: 20px 0;
+            transition: 0.3s ease;
+            opacity: 0;
+        }
+
+        .event-left {
+            left: 0;
+            transform: translateX(-50px);
+        }
+
+        .event-right {
+            left: 50%;
+            transform: translateX(50px);
+        }
+
+        .event h2 {
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 0 1px 2px #000;
+            text-align: center;
+        }
+
+        .event p {
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .event.highlight {
+            color: #ce1141;
+            font-weight: bold;
+        }
+
+        .event:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 255, 255, 0.25);
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::before {
+                left: 10px;
+            }
+            .event {
+                width: 90%;
+                left: 0 !important;
+                transform: translateX(0);
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    MICHAEL JORDAN: FROM CHILD TO GOAT
+</header>
+
+<!-- Hero circular image -->
+<img src="jord.jpg" alt="Michael Jordan" class="hero-img">
+
+<nav>
+    <a href="#early">Early Life</a>
+    <a href="#highschool">High School</a>
+    <a href="#nba">NBA Career</a>
+    <a href="#networth">Net Worth</a>
+    <a href="#legacy">Legacy</a>
+</nav>
+
+<div class="timeline">
+
+    <div class="event event-left" id="early">
+        <h2>Early Life</h2>
+        <p>
+            Michael Jordan was born on February 17, 1963, in Brooklyn, New York,
+            and grew up in Wilmington, North Carolina. He loved basketball from
+            a young age and was inspired by his competitive family environment.
+        </p>
+    </div>
+
+    <div class="event event-right" id="highschool">
+        <h2>High School Stardom</h2>
+        <p>
+            At Laney High School, Jordan excelled in basketball,
+            becoming the star of his team. His talent started to attract
+            attention from college scouts.
+        </p>
+    </div>
+
+    <div class="event event-left" id="nba">
+        <h2>NBA Career</h2>
+        <p>
+            Drafted #3 overall in 1984 by the Chicago Bulls,
+            Michael Jordan won 6 NBA Championships, 6 Finals MVPs,
+            and 5 regular-season MVP awards. He became a global icon.
+        </p>
+    </div>
+
+    <div class="event event-right" id="networth">
+        <h2>Net Worth & Earnings</h2>
+        <p>
+            Michael Jordan's net worth is estimated at
+            <span class="highlight">$2.2 billion</span>, including NBA earnings,
+            endorsements (Nike, Gatorade, Hanes), and ownership of the Charlotte Hornets.
+        </p>
+    </div>
+
+    <div class="event event-left" id="legacy">
+        <h2>Legacy & GOAT Debate</h2>
+        <p>
+            Michael Jordan is widely regarded as the greatest basketball player of all time.
+            His competitiveness, clutch performances, and influence on the game are unmatched.
+        </p>
+        <p class="highlight">
+            Determination • Skill • Championship Mindset = GOAT
+        </p>
+    </div>
+
+</div>
+
+
+
+<script>
+    // Scroll reveal animation
+    const events = document.querySelectorAll('.event');
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight / 5 * 4;
+        events.forEach(event => {
+            const eventTop = event.getBoundingClientRect().top;
+            if (eventTop < triggerBottom) {
+                event.style.opacity = '1';
+                event.style.transform = 'translateX(0)';
+            }
+        });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+</script>
+<img src="jor.jpg" alt="Profile" width="350" height="350">
+<footer>
+                       <!-- NEXT PAGE BUTTON -->
+<button class="next-button" onclick="location.href='http://localhost:8158/kobe.html'">Back</button>
+
+
+<style>
+    .next-button {
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #22c55e;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .next-button:hover {
+        background-color: #16a34a;
+        transform: translateY(-3px);
+    }
+</style>
+        <!-- NEXT PAGE BUTTON -->
+<button class="next-button" onclick="location.href='http://localhost:8158/shack.html'">Next</button>
+
+<style>
+    .next-button {
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #22c55e;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .next-button:hover {
+        background-color: #16a34a;
+        transform: translateY(-3px);
+    }
+</style>
+</footer>
+</body>
+</html>

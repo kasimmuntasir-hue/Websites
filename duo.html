@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muslimin Q. Kasim | Personal Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #0a1f44, #1a3d5f, #2a4f7c);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .glass-container {
+            width: 90%;
+            max-width: 850px;
+            padding: 50px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            color: white;
+            transition: 0.4s ease;
+        }
+
+        .glass-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 18px;
+            font-size: 17px;
+            opacity: 0.95;
+            text-align: justify;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #87ceeb;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .links a {
+            color: #87ceeb;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .glass-container {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+
+        audio {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="glass-container">
+        <h1>Welcome to My Website</h1>
+        <audio controls>
+            <source src="senr.mp3" type="audio/mpeg">
+        </audio>
+        <p>(Heaven Sent) <br> Hi, My name is <span class="highlight">Muslimin Q. Kasim</span>, formerly known as Mohammad Wali. I was born on November 30, 2010, and I'm currently 15 years old. I live in Sta. Barbara CMUP Drive, and I am half-Malaysian and half-Filipino. My hobbies include trying new things alone and watching Anime to relax. One of my dreams is to visit Japan, find a serene grassy spot, and recreate a iconic scene from Vinland Saga – standing tall, with no enemies, and embracing the peace.</p>
+        <p> This website is about my favorite aircraft, the B2-Spirit.</p>
+        <div class="links">
+            <a href="http://localhost:8158/login.html">Click Here</a>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

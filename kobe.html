@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kobe Bryant: From Child to GOAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #000000, #fdb927);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #f5f5f5;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffd700;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px #000000;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffd700;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Only main profile image circular */
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .timeline {
+            width: 90%;
+            max-width: 1000px;
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .event {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
+            margin: 20px 0;
+            transition: 0.3s ease;
+            opacity: 0;
+        }
+
+        .event-left {
+            left: 0;
+            transform: translateX(-50px);
+        }
+
+        .event-right {
+            left: 50%;
+            transform: translateX(50px);
+        }
+
+        .event h2 {
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 0 1px 2px #000000;
+        }
+
+        .event p {
+            line-height: 1.7;
+        }
+
+        .event.highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .event:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25);
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .event {
+                width: 90%;
+                left: 0 !important;
+                transform: translateX(0);
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    KOBE BRYANT: FROM CHILD TO GOAT
+</header>
+
+<!-- Main profile image circular -->
+<img src="kobe.jpg" alt="Kobe Bryant Profile" class="profile-img">
+
+<nav>
+    <a href="#early">Early Life</a>
+    <a href="#highschool">High School</a>
+    <a href="#nba">NBA Career</a>
+    <a href="#networth">Net Worth</a>
+    <a href="#legacy">Legacy</a>
+</nav>
+
+<div class="timeline">
+
+    <div class="event event-left" id="early">
+        <h2>Early Life</h2>
+        <p>
+            Kobe Bryant was born on August 23, 1978, in Philadelphia, Pennsylvania.
+            His father, Joe “Jellybean” Bryant, was a professional basketball player.
+            From a young age, Kobe displayed incredible talent and work ethic.
+        </p>
+    </div>
+
+    <div class="event event-right" id="highschool">
+        <h2>High School Stardom</h2>
+        <p>
+            Kobe attended Lower Merion High School in Pennsylvania, where
+            he led his team to a state championship and became a national sensation.
+        </p>
+    </div>
+
+    <div class="event event-left" id="nba">
+        <h2>NBA Career</h2>
+        <p>
+            Drafted #13 overall in 1996 and traded to the Los Angeles Lakers,
+            Kobe spent 20 seasons with the team, winning 5 NBA Championships
+            and earning 2 Finals MVPs.
+        </p>
+    </div>
+
+    <div class="event event-right" id="networth">
+        <h2>Net Worth & Earnings</h2>
+        <p>
+            Kobe Bryant's estimated net worth at the time of his passing was
+            <span class="highlight">$600 million</span>, from NBA salary,
+            endorsements (Nike, Sprite), and business ventures.
+        </p>
+    </div>
+
+    <div class="event event-left" id="legacy">
+        <h2>Legacy & GOAT Debate</h2>
+        <p>
+            Kobe Bryant is remembered for his "Mamba Mentality," scoring records,
+            championships, and inspiring millions. Dedication, work ethic,
+            and passion made him one of the greatest players ever.
+        </p>
+        <p class="highlight">
+            Dedication • Work Ethic • Passion = Greatness
+        </p>
+    </div>
+
+</div>
+
+<script>
+    // Scroll reveal animation
+    const events = document.querySelectorAll('.event');
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight / 5 * 4;
+        events.forEach(event => {
+            const eventTop = event.getBoundingClientRect().top;
+            if (eventTop < triggerBottom) {
+                event.style.opacity = '1';
+                event.style.transform = 'translateX(0)';
+            }
+        });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+</script>
+<footer>
+        <img src="bry.jpg" alt="Profile" width="350" height="350">
+                       <!-- NEXT PAGE BUTTON -->
+<button class="next-button" onclick="location.href='http://localhost:8158/step.html'">Back</button>
+
+
+<style>
+    .next-button {
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #22c55e;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .next-button:hover {
+        background-color: #16a34a;
+        transform: translateY(-3px);
+    }
+</style>
+        <!-- NEXT PAGE BUTTON -->
+<button class="next-button" onclick="location.href='http://localhost:8158/jordan.html'">Next</button>
+
+<style>
+    .next-button {
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #22c55e;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .next-button:hover {
+        background-color: #16a34a;
+        transform: translateY(-3px);
+    }
+</style>
+        </footer>
+
+</body>
+</html>

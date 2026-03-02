@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shaquille O'Neal: From Child to GOAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #552583, #fdb927); /* Lakers Purple to Gold */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #f5f5f5;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px #000;
+        }
+
+        /* Hero circular image */
+        .hero-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* circular */
+            object-fit: cover;
+            border: 4px solid #fff;
+            margin: 20px auto;
+            display: block;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #fdb927;
+        }
+
+        .timeline {
+            width: 90%;
+            max-width: 1000px;
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: #fff;
+            transform: translateX(-50%);
+        }
+
+        .event {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
+            margin: 20px 0;
+            transition: 0.3s ease;
+            opacity: 0;
+        }
+
+        .event-left {
+            left: 0;
+            transform: translateX(-50px);
+        }
+
+        .event-right {
+            left: 50%;
+            transform: translateX(50px);
+        }
+
+        .event h2 {
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 0 1px 2px #000;
+            text-align: center;
+        }
+
+        .event p {
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .event.highlight {
+            color: #fdb927;
+            font-weight: bold;
+        }
+
+        .event:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 255, 255, 0.25);
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::before {
+                left: 10px;
+            }
+            .event {
+                width: 90%;
+                left: 0 !important;
+                transform: translateX(0);
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    SHAQUILLE O'NEAL: FROM CHILD TO GOAT
+</header>
+
+<!-- Hero circular image -->
+<img src="shack.jpg" alt="Shaquille O'Neal" class="hero-img">
+
+<nav>
+    <a href="#early">Early Life</a>
+    <a href="#highschool">High School</a>
+    <a href="#nba">NBA Career</a>
+    <a href="#networth">Net Worth</a>
+    <a href="#legacy">Legacy</a>
+</nav>
+
+<div class="timeline">
+
+    <div class="event event-left" id="early">
+        <h2>Early Life</h2>
+        <p>
+            Shaquille O'Neal was born on March 6, 1972, in Newark, New Jersey.
+            Growing up in a challenging environment, Shaq developed his size, athleticism,
+            and love for basketball early on.
+        </p>
+    </div>
+
+    <div class="event event-right" id="highschool">
+        <h2>High School Stardom</h2>
+        <p>
+            At Robert G. Cole High School in Texas, Shaq became a dominant center,
+            gaining attention from top college programs due to his extraordinary size and skill.
+        </p>
+    </div>
+
+    <div class="event event-left" id="nba">
+        <h2>NBA Career</h2>
+        <p>
+            Drafted #1 overall in 1992 by the Orlando Magic, Shaq played for multiple teams,
+            including the Lakers and Heat. He won 4 NBA Championships, 3 Finals MVPs,
+            and 1 regular-season MVP, becoming one of the most dominant centers in history.
+        </p>
+    </div>
+
+    <div class="event event-right" id="networth">
+        <h2>Net Worth & Earnings</h2>
+        <p>
+            Shaquille O'Neal's net worth is estimated at
+            <span class="highlight">$400 million</span>, earned from NBA salary,
+            endorsements (Reebok, Pepsi, Papa John's), and business ventures.
+        </p>
+    </div>
+
+    <div class="event event-left" id="legacy">
+        <h2>Legacy & GOAT Debate</h2>
+        <p>
+            Shaq is remembered as one of the most dominant big men in NBA history.
+            His size, skill, and personality left a lasting impact on basketball and pop culture.
+        </p>
+        <p class="highlight">
+            Dominance • Size • Charisma = GOAT Legacy
+        </p>
+    </div>
+
+</div>
+<img src="shacks.jpg" alt="Profile" width="350" height="350">
+<footer>
+                           <!-- NEXT PAGE BUTTON -->
+<button class="next-button" onclick="location.href='http://localhost:8158/jordan.html'">Back</button>
+
+
+<style>
+    .next-button {
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #22c55e;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .next-button:hover {
+        background-color: #16a34a;
+        transform: translateY(-3px);
+    }
+</style>
+        <!-- NEXT PAGE BUTTON -->
+<button class="next-button" onclick="location.href='http://localhost:8158/lasts.html'">Next</button>
+
+<style>
+    .next-button {
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #22c55e;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .next-button:hover {
+        background-color: #16a34a;
+        transform: translateY(-3px);
+    }
+</style>
+</footer>
+
+<script>
+    // Scroll reveal animation
+    const events = document.querySelectorAll('.event');
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight / 5 * 4;
+        events.forEach(event => {
+            const eventTop = event.getBoundingClientRect().top;
+            if (eventTop < triggerBottom) {
+                event.style.opacity = '1';
+                event.style.transform = 'translateX(0)';
+            }
+        });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+</script>
+
+</body>
+</html>
